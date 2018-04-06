@@ -1,0 +1,565 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D25D0CAE20777A19001E99F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25D0CAD20777A19001E99F7 /* AppDelegate.swift */; };
+		D25D0CB020777A19001E99F7 /* PrimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25D0CAF20777A19001E99F7 /* PrimeViewController.swift */; };
+		D25D0CB520777A19001E99F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D25D0CB420777A19001E99F7 /* Assets.xcassets */; };
+		D25D0CB820777A19001E99F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D25D0CB620777A19001E99F7 /* LaunchScreen.storyboard */; };
+		D25D0CC320777A19001E99F7 /* ParkingJammerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25D0CC220777A19001E99F7 /* ParkingJammerTests.swift */; };
+		D25D0CCE20777A19001E99F7 /* ParkingJammerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25D0CCD20777A19001E99F7 /* ParkingJammerUITests.swift */; };
+		D25D0CE020777AB1001E99F7 /* YearSummary.csv in Resources */ = {isa = PBXBuildFile; fileRef = D25D0CDF20777AB1001E99F7 /* YearSummary.csv */; };
+		D25D0CE220777ACB001E99F7 /* LocationWiseTickets.csv in Resources */ = {isa = PBXBuildFile; fileRef = D25D0CE120777ACB001E99F7 /* LocationWiseTickets.csv */; };
+		D25D0CE420778157001E99F7 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25D0CE320778157001E99F7 /* LocationsViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D25D0CBF20777A19001E99F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D25D0CA220777A19001E99F7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D25D0CA920777A19001E99F7;
+			remoteInfo = ParkingJammer;
+		};
+		D25D0CCA20777A19001E99F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D25D0CA220777A19001E99F7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D25D0CA920777A19001E99F7;
+			remoteInfo = ParkingJammer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D25D0CAA20777A19001E99F7 /* ParkingJammer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParkingJammer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D25D0CAD20777A19001E99F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D25D0CAF20777A19001E99F7 /* PrimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimeViewController.swift; sourceTree = "<group>"; };
+		D25D0CB420777A19001E99F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D25D0CB720777A19001E99F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D25D0CB920777A19001E99F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D25D0CBE20777A19001E99F7 /* ParkingJammerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParkingJammerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D25D0CC220777A19001E99F7 /* ParkingJammerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingJammerTests.swift; sourceTree = "<group>"; };
+		D25D0CC420777A19001E99F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D25D0CC920777A19001E99F7 /* ParkingJammerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParkingJammerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D25D0CCD20777A19001E99F7 /* ParkingJammerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingJammerUITests.swift; sourceTree = "<group>"; };
+		D25D0CCF20777A19001E99F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D25D0CDF20777AB1001E99F7 /* YearSummary.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = YearSummary.csv; sourceTree = "<group>"; };
+		D25D0CE120777ACB001E99F7 /* LocationWiseTickets.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LocationWiseTickets.csv; sourceTree = "<group>"; };
+		D25D0CE320778157001E99F7 /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D25D0CA720777A19001E99F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D25D0CBB20777A19001E99F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D25D0CC620777A19001E99F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D25D0CA120777A19001E99F7 = {
+			isa = PBXGroup;
+			children = (
+				D25D0CAC20777A19001E99F7 /* ParkingJammer */,
+				D25D0CC120777A19001E99F7 /* ParkingJammerTests */,
+				D25D0CCC20777A19001E99F7 /* ParkingJammerUITests */,
+				D25D0CAB20777A19001E99F7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D25D0CAB20777A19001E99F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D25D0CAA20777A19001E99F7 /* ParkingJammer.app */,
+				D25D0CBE20777A19001E99F7 /* ParkingJammerTests.xctest */,
+				D25D0CC920777A19001E99F7 /* ParkingJammerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D25D0CAC20777A19001E99F7 /* ParkingJammer */ = {
+			isa = PBXGroup;
+			children = (
+				D25D0CAD20777A19001E99F7 /* AppDelegate.swift */,
+				D25D0CAF20777A19001E99F7 /* PrimeViewController.swift */,
+				D25D0CB420777A19001E99F7 /* Assets.xcassets */,
+				D25D0CB620777A19001E99F7 /* LaunchScreen.storyboard */,
+				D25D0CB920777A19001E99F7 /* Info.plist */,
+				D25D0CDF20777AB1001E99F7 /* YearSummary.csv */,
+				D25D0CE120777ACB001E99F7 /* LocationWiseTickets.csv */,
+				D25D0CE320778157001E99F7 /* LocationsViewController.swift */,
+			);
+			path = ParkingJammer;
+			sourceTree = "<group>";
+		};
+		D25D0CC120777A19001E99F7 /* ParkingJammerTests */ = {
+			isa = PBXGroup;
+			children = (
+				D25D0CC220777A19001E99F7 /* ParkingJammerTests.swift */,
+				D25D0CC420777A19001E99F7 /* Info.plist */,
+			);
+			path = ParkingJammerTests;
+			sourceTree = "<group>";
+		};
+		D25D0CCC20777A19001E99F7 /* ParkingJammerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D25D0CCD20777A19001E99F7 /* ParkingJammerUITests.swift */,
+				D25D0CCF20777A19001E99F7 /* Info.plist */,
+			);
+			path = ParkingJammerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D25D0CA920777A19001E99F7 /* ParkingJammer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D25D0CD220777A19001E99F7 /* Build configuration list for PBXNativeTarget "ParkingJammer" */;
+			buildPhases = (
+				D25D0CA620777A19001E99F7 /* Sources */,
+				D25D0CA720777A19001E99F7 /* Frameworks */,
+				D25D0CA820777A19001E99F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ParkingJammer;
+			productName = ParkingJammer;
+			productReference = D25D0CAA20777A19001E99F7 /* ParkingJammer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D25D0CBD20777A19001E99F7 /* ParkingJammerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D25D0CD520777A19001E99F7 /* Build configuration list for PBXNativeTarget "ParkingJammerTests" */;
+			buildPhases = (
+				D25D0CBA20777A19001E99F7 /* Sources */,
+				D25D0CBB20777A19001E99F7 /* Frameworks */,
+				D25D0CBC20777A19001E99F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D25D0CC020777A19001E99F7 /* PBXTargetDependency */,
+			);
+			name = ParkingJammerTests;
+			productName = ParkingJammerTests;
+			productReference = D25D0CBE20777A19001E99F7 /* ParkingJammerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D25D0CC820777A19001E99F7 /* ParkingJammerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D25D0CD820777A19001E99F7 /* Build configuration list for PBXNativeTarget "ParkingJammerUITests" */;
+			buildPhases = (
+				D25D0CC520777A19001E99F7 /* Sources */,
+				D25D0CC620777A19001E99F7 /* Frameworks */,
+				D25D0CC720777A19001E99F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D25D0CCB20777A19001E99F7 /* PBXTargetDependency */,
+			);
+			name = ParkingJammerUITests;
+			productName = ParkingJammerUITests;
+			productReference = D25D0CC920777A19001E99F7 /* ParkingJammerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D25D0CA220777A19001E99F7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Prato Das";
+				TargetAttributes = {
+					D25D0CA920777A19001E99F7 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					D25D0CBD20777A19001E99F7 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D25D0CA920777A19001E99F7;
+					};
+					D25D0CC820777A19001E99F7 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D25D0CA920777A19001E99F7;
+					};
+				};
+			};
+			buildConfigurationList = D25D0CA520777A19001E99F7 /* Build configuration list for PBXProject "ParkingJammer" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D25D0CA120777A19001E99F7;
+			productRefGroup = D25D0CAB20777A19001E99F7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D25D0CA920777A19001E99F7 /* ParkingJammer */,
+				D25D0CBD20777A19001E99F7 /* ParkingJammerTests */,
+				D25D0CC820777A19001E99F7 /* ParkingJammerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D25D0CA820777A19001E99F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D25D0CE020777AB1001E99F7 /* YearSummary.csv in Resources */,
+				D25D0CB820777A19001E99F7 /* LaunchScreen.storyboard in Resources */,
+				D25D0CB520777A19001E99F7 /* Assets.xcassets in Resources */,
+				D25D0CE220777ACB001E99F7 /* LocationWiseTickets.csv in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D25D0CBC20777A19001E99F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D25D0CC720777A19001E99F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D25D0CA620777A19001E99F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D25D0CB020777A19001E99F7 /* PrimeViewController.swift in Sources */,
+				D25D0CAE20777A19001E99F7 /* AppDelegate.swift in Sources */,
+				D25D0CE420778157001E99F7 /* LocationsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D25D0CBA20777A19001E99F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D25D0CC320777A19001E99F7 /* ParkingJammerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D25D0CC520777A19001E99F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D25D0CCE20777A19001E99F7 /* ParkingJammerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D25D0CC020777A19001E99F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D25D0CA920777A19001E99F7 /* ParkingJammer */;
+			targetProxy = D25D0CBF20777A19001E99F7 /* PBXContainerItemProxy */;
+		};
+		D25D0CCB20777A19001E99F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D25D0CA920777A19001E99F7 /* ParkingJammer */;
+			targetProxy = D25D0CCA20777A19001E99F7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D25D0CB620777A19001E99F7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D25D0CB720777A19001E99F7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D25D0CD020777A19001E99F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D25D0CD120777A19001E99F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D25D0CD320777A19001E99F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B4K37TQC3B;
+				INFOPLIST_FILE = ParkingJammer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ca.das.ParkoMeter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D25D0CD420777A19001E99F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B4K37TQC3B;
+				INFOPLIST_FILE = ParkingJammer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ca.das.ParkoMeter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D25D0CD620777A19001E99F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B4K37TQC3B;
+				INFOPLIST_FILE = ParkingJammerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ca.das.ParkingJammerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ParkingJammer.app/ParkingJammer";
+			};
+			name = Debug;
+		};
+		D25D0CD720777A19001E99F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B4K37TQC3B;
+				INFOPLIST_FILE = ParkingJammerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ca.das.ParkingJammerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ParkingJammer.app/ParkingJammer";
+			};
+			name = Release;
+		};
+		D25D0CD920777A19001E99F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B4K37TQC3B;
+				INFOPLIST_FILE = ParkingJammerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ca.das.ParkingJammerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ParkingJammer;
+			};
+			name = Debug;
+		};
+		D25D0CDA20777A19001E99F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B4K37TQC3B;
+				INFOPLIST_FILE = ParkingJammerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ca.das.ParkingJammerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ParkingJammer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D25D0CA520777A19001E99F7 /* Build configuration list for PBXProject "ParkingJammer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D25D0CD020777A19001E99F7 /* Debug */,
+				D25D0CD120777A19001E99F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D25D0CD220777A19001E99F7 /* Build configuration list for PBXNativeTarget "ParkingJammer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D25D0CD320777A19001E99F7 /* Debug */,
+				D25D0CD420777A19001E99F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D25D0CD520777A19001E99F7 /* Build configuration list for PBXNativeTarget "ParkingJammerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D25D0CD620777A19001E99F7 /* Debug */,
+				D25D0CD720777A19001E99F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D25D0CD820777A19001E99F7 /* Build configuration list for PBXNativeTarget "ParkingJammerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D25D0CD920777A19001E99F7 /* Debug */,
+				D25D0CDA20777A19001E99F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D25D0CA220777A19001E99F7 /* Project object */;
+}
