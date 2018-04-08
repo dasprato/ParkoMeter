@@ -42,8 +42,8 @@ class PrimeViewController: UIViewController, CLLocationManagerDelegate {
         self.navigationItem.setLeftBarButton(reportButton, animated: true)
         
         view.addSubview(interactiveBackgroundMap)
-        NSLayoutConstraint.activate([interactiveBackgroundMap.leftAnchor.constraint(equalTo: view.leftAnchor), interactiveBackgroundMap.rightAnchor.constraint(equalTo: view.rightAnchor), interactiveBackgroundMap.topAnchor.constraint(equalTo: view.topAnchor), interactiveBackgroundMap.bottomAnchor.constraint(equalTo: view.bottomAnchor)])
-        interactiveBackgroundMap.setZoomLevel(14, animated: true)
+        NSLayoutConstraint.activate([interactiveBackgroundMap.leftAnchor.constraint(equalTo: view.leftAnchor), interactiveBackgroundMap.rightAnchor.constraint(equalTo: view.rightAnchor), interactiveBackgroundMap.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor), interactiveBackgroundMap.bottomAnchor.constraint(equalTo: view.bottomAnchor)])
+        interactiveBackgroundMap.setZoomLevel(17, animated: true)
         self.fetchingDataBanner.duration = 60.0
         self.fetchingDataBanner.autoDismiss = false
         self.reportBanner.autoDismiss = true

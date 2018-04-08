@@ -35,8 +35,15 @@ class LocationsViewController: UIViewController, UISearchBarDelegate, UITextFiel
         allTicketsCollectionView.backgroundColor = .white
         view.addSubview(allTicketsCollectionView)
         
-        NSLayoutConstraint.activate([allTicketsCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor), allTicketsCollectionView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -16), allTicketsCollectionView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor,  constant: 16), allTicketsCollectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor)])
-        
+        view.addSubview(allTicketsCollectionView)
+        [
+            allTicketsCollectionView.topAnchor.constraint(equalTo: view.topAnchor),
+            allTicketsCollectionView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor),
+            allTicketsCollectionView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor),
+            allTicketsCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            ].forEach { (constraint) in
+                constraint.isActive = true
+        }
         allTicketsCollectionView.register(allTicketsCollectionViewCell.self, forCellWithReuseIdentifier: cellId)
         allTicketsCollectionView.delegate = self
         allTicketsCollectionView.dataSource = self
@@ -46,28 +53,17 @@ class LocationsViewController: UIViewController, UISearchBarDelegate, UITextFiel
         searchBar.delegate = self
         searchBar.becomeFirstResponder()
         arrayOfLocationsToShow = arrayOfLocations
-
-        
     }
 
-    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-
-    }
-    
-    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        print("Editing Over")
-        
-    }
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        
-
         let searchFieldText = searchBar.text!
         DispatchQueue.global(qos: .background).async {
-            
             DispatchQueue.main.async {
-                self.searchBanner.show()
+                if !self.searchBanner.isDisplaying {
+                    self.searchBanner.show()
+                }
+                
             }
-            
             self.arrayOfLocationsToShow?.removeAll()
             for i in 0..<self.arrayOfLocations!.count {
                 guard let locationName = self.arrayOfLocations![i].locationName else { return }
@@ -76,18 +72,10 @@ class LocationsViewController: UIViewController, UISearchBarDelegate, UITextFiel
                     self.arrayOfLocationsToShow?.append(Location(locationName: locationName, numberOfTickets: numberOfTickets))
                 }
             }
-            
-            DispatchQueue.main.async {
-                print("This is run on the main queue, after the previous code in outer block")
-            }
+
         }
-        
-        
-
-        
-        
-
     }
+    
     var searchBar: UISearchBar = {
         let sb = UISearchBar(frame: CGRect.zero)
         sb.translatesAutoresizingMaskIntoConstraints = false
@@ -203,7 +191,7 @@ class allTicketsCollectionViewCell: UICollectionViewCell {
         contentView.addSubview(label)
         label.textColor = .black
         
-        NSLayoutConstraint.activate([label.topAnchor.constraint(equalTo: contentView.topAnchor), label.bottomAnchor.constraint(equalTo: contentView.bottomAnchor), label.rightAnchor.constraint(equalTo: rightAnchor), label.leftAnchor.constraint(equalTo: contentView.leftAnchor), label.heightAnchor.constraint(equalTo: contentView.heightAnchor)])
+        NSLayoutConstraint.activate([label.topAnchor.constraint(equalTo: topAnchor), label.bottomAnchor.constraint(equalTo: bottomAnchor), label.rightAnchor.constraint(equalTo: rightAnchor), label.leftAnchor.constraint(equalTo: leftAnchor), label.heightAnchor.constraint(equalTo: heightAnchor)])
     }
     
     required init?(coder aDecoder: NSCoder) {
