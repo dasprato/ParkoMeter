@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2CF8D5110DE6ED9C173C6E3B /* Pods_ParkingJammerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7358E06579DB4826A752ACC5 /* Pods_ParkingJammerTests.framework */; };
+		5ED59B77059066F4E2D2658D /* Pods_ParkingJammerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B84C38973BFA62936682F26 /* Pods_ParkingJammerUITests.framework */; };
+		6B2C635E71002E4FA1A3475E /* Pods_ParkingJammer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FBCEFF9FD06758676CF1124 /* Pods_ParkingJammer.framework */; };
 		D25D0CAE20777A19001E99F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25D0CAD20777A19001E99F7 /* AppDelegate.swift */; };
 		D25D0CB020777A19001E99F7 /* PrimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25D0CAF20777A19001E99F7 /* PrimeViewController.swift */; };
 		D25D0CB520777A19001E99F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D25D0CB420777A19001E99F7 /* Assets.xcassets */; };
@@ -16,6 +19,7 @@
 		D25D0CE020777AB1001E99F7 /* YearSummary.csv in Resources */ = {isa = PBXBuildFile; fileRef = D25D0CDF20777AB1001E99F7 /* YearSummary.csv */; };
 		D25D0CE220777ACB001E99F7 /* LocationWiseTickets.csv in Resources */ = {isa = PBXBuildFile; fileRef = D25D0CE120777ACB001E99F7 /* LocationWiseTickets.csv */; };
 		D25D0CE420778157001E99F7 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25D0CE320778157001E99F7 /* LocationsViewController.swift */; };
+		D25D0CE8207862D6001E99F7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D25D0CE7207862D6001E99F7 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2BE0A185A31C0E154A88C0D5 /* Pods-ParkingJammerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParkingJammerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ParkingJammerTests/Pods-ParkingJammerTests.release.xcconfig"; sourceTree = "<group>"; };
+		46FF396A8B83303529FC9625 /* Pods-ParkingJammer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParkingJammer.release.xcconfig"; path = "Pods/Target Support Files/Pods-ParkingJammer/Pods-ParkingJammer.release.xcconfig"; sourceTree = "<group>"; };
+		4B84C38973BFA62936682F26 /* Pods_ParkingJammerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParkingJammerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FBCEFF9FD06758676CF1124 /* Pods_ParkingJammer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParkingJammer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7358E06579DB4826A752ACC5 /* Pods_ParkingJammerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParkingJammerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C2B54238E35A24CD759EC43 /* Pods-ParkingJammerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParkingJammerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParkingJammerUITests/Pods-ParkingJammerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		907E33AFC53CE095CFD58266 /* Pods-ParkingJammerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParkingJammerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParkingJammerTests/Pods-ParkingJammerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B980087D5D069BB3004B812D /* Pods-ParkingJammer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParkingJammer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParkingJammer/Pods-ParkingJammer.debug.xcconfig"; sourceTree = "<group>"; };
+		CA7F1D2F3C5F772BAFCE0224 /* Pods-ParkingJammerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParkingJammerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ParkingJammerUITests/Pods-ParkingJammerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D25D0CAA20777A19001E99F7 /* ParkingJammer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParkingJammer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D25D0CAD20777A19001E99F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D25D0CAF20777A19001E99F7 /* PrimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimeViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +64,7 @@
 		D25D0CDF20777AB1001E99F7 /* YearSummary.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = YearSummary.csv; sourceTree = "<group>"; };
 		D25D0CE120777ACB001E99F7 /* LocationWiseTickets.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LocationWiseTickets.csv; sourceTree = "<group>"; };
 		D25D0CE320778157001E99F7 /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
+		D25D0CE7207862D6001E99F7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B2C635E71002E4FA1A3475E /* Pods_ParkingJammer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CF8D5110DE6ED9C173C6E3B /* Pods_ParkingJammerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +88,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5ED59B77059066F4E2D2658D /* Pods_ParkingJammerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10CA13BD09F895975F9D4C3C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5FBCEFF9FD06758676CF1124 /* Pods_ParkingJammer.framework */,
+				7358E06579DB4826A752ACC5 /* Pods_ParkingJammerTests.framework */,
+				4B84C38973BFA62936682F26 /* Pods_ParkingJammerUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AB80DE8895BC86E2A342D282 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B980087D5D069BB3004B812D /* Pods-ParkingJammer.debug.xcconfig */,
+				46FF396A8B83303529FC9625 /* Pods-ParkingJammer.release.xcconfig */,
+				907E33AFC53CE095CFD58266 /* Pods-ParkingJammerTests.debug.xcconfig */,
+				2BE0A185A31C0E154A88C0D5 /* Pods-ParkingJammerTests.release.xcconfig */,
+				8C2B54238E35A24CD759EC43 /* Pods-ParkingJammerUITests.debug.xcconfig */,
+				CA7F1D2F3C5F772BAFCE0224 /* Pods-ParkingJammerUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D25D0CA120777A19001E99F7 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +125,8 @@
 				D25D0CC120777A19001E99F7 /* ParkingJammerTests */,
 				D25D0CCC20777A19001E99F7 /* ParkingJammerUITests */,
 				D25D0CAB20777A19001E99F7 /* Products */,
+				AB80DE8895BC86E2A342D282 /* Pods */,
+				10CA13BD09F895975F9D4C3C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +143,7 @@
 		D25D0CAC20777A19001E99F7 /* ParkingJammer */ = {
 			isa = PBXGroup;
 			children = (
+				D25D0CE7207862D6001E99F7 /* GoogleService-Info.plist */,
 				D25D0CAD20777A19001E99F7 /* AppDelegate.swift */,
 				D25D0CAF20777A19001E99F7 /* PrimeViewController.swift */,
 				D25D0CB420777A19001E99F7 /* Assets.xcassets */,
@@ -138,9 +181,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D25D0CD220777A19001E99F7 /* Build configuration list for PBXNativeTarget "ParkingJammer" */;
 			buildPhases = (
+				526BDFD30FF598F02DF4375B /* [CP] Check Pods Manifest.lock */,
 				D25D0CA620777A19001E99F7 /* Sources */,
 				D25D0CA720777A19001E99F7 /* Frameworks */,
 				D25D0CA820777A19001E99F7 /* Resources */,
+				D8E44A524B360D01D6309D4A /* [CP] Embed Pods Frameworks */,
+				C787C4D09C178E8FA57D1FF2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -155,9 +201,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D25D0CD520777A19001E99F7 /* Build configuration list for PBXNativeTarget "ParkingJammerTests" */;
 			buildPhases = (
+				A55FCB287EF76445EDC294CB /* [CP] Check Pods Manifest.lock */,
 				D25D0CBA20777A19001E99F7 /* Sources */,
 				D25D0CBB20777A19001E99F7 /* Frameworks */,
 				D25D0CBC20777A19001E99F7 /* Resources */,
+				6D868FFDEDB571C4CFE6FA9B /* [CP] Embed Pods Frameworks */,
+				413DF5CC753C3D591D65E962 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -173,9 +222,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D25D0CD820777A19001E99F7 /* Build configuration list for PBXNativeTarget "ParkingJammerUITests" */;
 			buildPhases = (
+				F38DF1FFC46515E0324B96E9 /* [CP] Check Pods Manifest.lock */,
 				D25D0CC520777A19001E99F7 /* Sources */,
 				D25D0CC620777A19001E99F7 /* Frameworks */,
 				D25D0CC720777A19001E99F7 /* Resources */,
+				932F009528A4B5F613ECF924 /* [CP] Embed Pods Frameworks */,
+				D6ED66A5CA26938395DDA6A7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -240,6 +292,7 @@
 			files = (
 				D25D0CE020777AB1001E99F7 /* YearSummary.csv in Resources */,
 				D25D0CB820777A19001E99F7 /* LaunchScreen.storyboard in Resources */,
+				D25D0CE8207862D6001E99F7 /* GoogleService-Info.plist in Resources */,
 				D25D0CB520777A19001E99F7 /* Assets.xcassets in Resources */,
 				D25D0CE220777ACB001E99F7 /* LocationWiseTickets.csv in Resources */,
 			);
@@ -260,6 +313,210 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		413DF5CC753C3D591D65E962 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ParkingJammerTests/Pods-ParkingJammerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		526BDFD30FF598F02DF4375B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ParkingJammer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D868FFDEDB571C4CFE6FA9B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ParkingJammerTests/Pods-ParkingJammerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		932F009528A4B5F613ECF924 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ParkingJammerUITests/Pods-ParkingJammerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A55FCB287EF76445EDC294CB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ParkingJammerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C787C4D09C178E8FA57D1FF2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ParkingJammer/Pods-ParkingJammer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6ED66A5CA26938395DDA6A7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ParkingJammerUITests/Pods-ParkingJammerUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D8E44A524B360D01D6309D4A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ParkingJammer/Pods-ParkingJammer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSPolly/AWSPolly.framework",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${PODS_ROOT}/Mapbox-iOS-SDK/dynamic/Mapbox.framework",
+				"${PODS_ROOT}/Mapbox-iOS-SDK/dynamic/Mapbox.framework.dSYM",
+				"${BUILT_PRODUCTS_DIR}/MapboxCoreNavigation/MapboxCoreNavigation.framework",
+				"${BUILT_PRODUCTS_DIR}/MapboxDirections.swift/MapboxDirections.framework",
+				"${BUILT_PRODUCTS_DIR}/MapboxGeocoder.swift/MapboxGeocoder.framework",
+				"${BUILT_PRODUCTS_DIR}/MapboxMobileEvents/MapboxMobileEvents.framework",
+				"${BUILT_PRODUCTS_DIR}/MapboxNavigation/MapboxNavigation.framework",
+				"${BUILT_PRODUCTS_DIR}/MarqueeLabel/MarqueeLabel.framework",
+				"${BUILT_PRODUCTS_DIR}/NotificationBannerSwift/NotificationBannerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Polyline/Polyline.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Solar/Solar.framework",
+				"${BUILT_PRODUCTS_DIR}/Turf/Turf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSPolly.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapbox.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/Mapbox.framework.dSYM",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MapboxCoreNavigation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MapboxDirections.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MapboxGeocoder.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MapboxMobileEvents.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MapboxNavigation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MarqueeLabel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NotificationBannerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Polyline.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Solar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Turf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ParkingJammer/Pods-ParkingJammer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F38DF1FFC46515E0324B96E9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ParkingJammerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D25D0CA620777A19001E99F7 /* Sources */ = {
@@ -424,6 +681,7 @@
 		};
 		D25D0CD320777A19001E99F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B980087D5D069BB3004B812D /* Pods-ParkingJammer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -440,6 +698,7 @@
 		};
 		D25D0CD420777A19001E99F7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46FF396A8B83303529FC9625 /* Pods-ParkingJammer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -456,6 +715,7 @@
 		};
 		D25D0CD620777A19001E99F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 907E33AFC53CE095CFD58266 /* Pods-ParkingJammerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -473,6 +733,7 @@
 		};
 		D25D0CD720777A19001E99F7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BE0A185A31C0E154A88C0D5 /* Pods-ParkingJammerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -490,6 +751,7 @@
 		};
 		D25D0CD920777A19001E99F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C2B54238E35A24CD759EC43 /* Pods-ParkingJammerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -506,6 +768,7 @@
 		};
 		D25D0CDA20777A19001E99F7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA7F1D2F3C5F772BAFCE0224 /* Pods-ParkingJammerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

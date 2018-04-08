@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import NotificationBannerSwift
+import MapboxGeocoder
 
 class LocationsViewController: UIViewController, UISearchBarDelegate {
     
@@ -14,12 +16,14 @@ class LocationsViewController: UIViewController, UISearchBarDelegate {
     var arrayOfLocations: [Location]? {
         didSet {
             allTicketsCollectionView.reloadData()
+            
         }
     }
     
     var arrayOfLocationsToShow: [Location]? {
         didSet {
             allTicketsCollectionView.reloadData()
+
         }
     }
     override func viewDidLoad() {
@@ -28,18 +32,20 @@ class LocationsViewController: UIViewController, UISearchBarDelegate {
         allTicketsCollectionView.backgroundColor = .white
         view.addSubview(allTicketsCollectionView)
         
-        NSLayoutConstraint.activate([allTicketsCollectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor), allTicketsCollectionView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor), allTicketsCollectionView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor), allTicketsCollectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor)])
+        NSLayoutConstraint.activate([allTicketsCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor), allTicketsCollectionView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -16), allTicketsCollectionView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor,  constant: 16), allTicketsCollectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor)])
         
         allTicketsCollectionView.register(allTicketsCollectionViewCell.self, forCellWithReuseIdentifier: cellId)
         allTicketsCollectionView.delegate = self
         allTicketsCollectionView.dataSource = self
-        
-        
+
         searchBar.placeholder = "Search"
         navigationItem.titleView = searchBar
+        
+        
         searchBar.delegate = self
         searchBar.becomeFirstResponder()
         arrayOfLocationsToShow = arrayOfLocations
+        
     }
     
 
@@ -65,10 +71,11 @@ class LocationsViewController: UIViewController, UISearchBarDelegate {
     var searchBar: UISearchBar = {
         let sb = UISearchBar(frame: CGRect.zero)
         sb.translatesAutoresizingMaskIntoConstraints = false
-        sb.barStyle = .black
+        sb.barStyle = .default
         let textFieldInsideSearchBar = sb.value(forKey: "searchField") as? UITextField
-        textFieldInsideSearchBar?.textColor = .white
-        sb.keyboardAppearance = .dark
+        textFieldInsideSearchBar?.textColor = .darkGray
+        textFieldInsideSearchBar?.font = UIFont(name: "Avenir", size: 16)
+        sb.keyboardAppearance = .light
         sb.placeholder = "Search"
         return sb
     }()
@@ -96,9 +103,14 @@ class LocationsViewController: UIViewController, UISearchBarDelegate {
         ccv.bounces = true
         ccv.alwaysBounceVertical = true
         ccv.backgroundColor = .clear
+        ccv.showsVerticalScrollIndicator = false
         return ccv
     }()
     
+    override func viewDidAppear(_ animated: Bool) {
+        
+
+    }
     
     
     
@@ -115,11 +127,12 @@ extension LocationsViewController: UICollectionViewDelegate, UICollectionViewDat
         let cell = allTicketsCollectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! allTicketsCollectionViewCell
         let location = arrayOfLocationsToShow![indexPath.row]
         cell.location =  location
+        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 20)
+        return CGSize(width: collectionView.frame.width, height: 30)
     }
 
 }
@@ -130,11 +143,35 @@ class allTicketsCollectionViewCell: UICollectionViewCell {
     
     var location: Location? {
         didSet {
-            label.text = " " + (location?.numberOfTickets)! + " tickets at " + (location?.locationName)!
-            if Int(location!.numberOfTickets)! > 40 {
-                self.backgroundColor = UIColor.red.withAlphaComponent(0.5)
-            } else {
-                self.backgroundColor = UIColor.green.withAlphaComponent(0.5)
+            
+            let numberOfTickets = (location?.numberOfTickets)!
+            let attr1 = [ NSAttributedStringKey.foregroundColor: UIColor.gray, NSAttributedStringKey.font: UIFont(name: "Avenir", size: 18) ]
+            let AttrNumberOfTickets = NSAttributedString(string: numberOfTickets, attributes: attr1)
+
+            
+            let locationName = (location!.locationName)!
+            let attr2 = [ NSAttributedStringKey.foregroundColor: UIColor.darkGray, NSAttributedStringKey.font: UIFont(name: "Avenir", size: 18)]
+            let AttrLocationName = NSAttributedString(string: locationName, attributes: attr2)
+            
+            
+            let attr3 = [ NSAttributedStringKey.foregroundColor: UIColor.darkGray, NSAttributedStringKey.font: UIFont(name: "Avenir", size: 16)]
+            let AttrAt = NSAttributedString(string: " at ", attributes: attr2)
+            
+            let labelText = NSMutableAttributedString()
+            labelText.append(AttrNumberOfTickets)
+             labelText.append(AttrAt)
+            labelText.append(AttrLocationName)
+            
+            label.attributedText = labelText
+            if let numOfTickets = location!.numberOfTickets {
+                let numberOfTickets = Int(numOfTickets)
+                if numberOfTickets != nil {
+                if numberOfTickets! > 40 {
+                    self.backgroundColor = UIColor.red.withAlphaComponent(0.5)
+                } else {
+                    self.backgroundColor = .white
+                }
+                }
             }
         }
     }
@@ -144,7 +181,7 @@ class allTicketsCollectionViewCell: UICollectionViewCell {
         contentView.addSubview(label)
         label.textColor = .black
         
-        NSLayoutConstraint.activate([label.topAnchor.constraint(equalTo: topAnchor), label.bottomAnchor.constraint(equalTo: bottomAnchor), label.rightAnchor.constraint(equalTo: rightAnchor), label.leftAnchor.constraint(equalTo: leftAnchor)])
+        NSLayoutConstraint.activate([label.topAnchor.constraint(equalTo: contentView.topAnchor), label.bottomAnchor.constraint(equalTo: contentView.bottomAnchor), label.rightAnchor.constraint(equalTo: rightAnchor), label.leftAnchor.constraint(equalTo: contentView.leftAnchor), label.heightAnchor.constraint(equalTo: contentView.heightAnchor)])
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -154,7 +191,10 @@ class allTicketsCollectionViewCell: UICollectionViewCell {
     var label: UILabel = {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.textColor = .white
+        lbl.font = UIFont(name: "Avenir", size: lbl.font.pointSize)
+        lbl.textAlignment = .center
+        lbl.textColor = .darkGray
+        lbl.adjustsFontSizeToFitWidth = true
         return lbl
     }()
 }
