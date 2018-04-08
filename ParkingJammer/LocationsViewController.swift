@@ -10,8 +10,8 @@ import UIKit
 import NotificationBannerSwift
 import MapboxGeocoder
 
-class LocationsViewController: UIViewController, UISearchBarDelegate {
-    
+class LocationsViewController: UIViewController, UISearchBarDelegate, UITextFieldDelegate {
+    let searchBanner = NotificationBanner(title: "Searching", subtitle: "For faster searches, enter more characters", style: .success)
     let cellId = "cellID"
     var arrayOfLocations: [Location]? {
         didSet {
@@ -22,10 +22,13 @@ class LocationsViewController: UIViewController, UISearchBarDelegate {
     
     var arrayOfLocationsToShow: [Location]? {
         didSet {
-            allTicketsCollectionView.reloadData()
-
+            DispatchQueue.main.async {
+                self.allTicketsCollectionView.reloadData()
+            }
+            
         }
     }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -40,31 +43,48 @@ class LocationsViewController: UIViewController, UISearchBarDelegate {
 
         searchBar.placeholder = "Search"
         navigationItem.titleView = searchBar
-        
-        
         searchBar.delegate = self
         searchBar.becomeFirstResponder()
         arrayOfLocationsToShow = arrayOfLocations
+
         
     }
-    
 
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+
+    }
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         print("Editing Over")
         
     }
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        self.navigationController?.navigationBar.topItem?.title = "Searching"
-        arrayOfLocationsToShow?.removeAll()
-        for i in 0..<arrayOfLocations!.count {
-            guard let locationName = arrayOfLocations![i].locationName else { return }
-            guard let numberOfTickets = arrayOfLocations![i].numberOfTickets else { return }
-            if locationName.containsIgnoringCase(searchBar.text!) {
-                arrayOfLocationsToShow?.append(Location(locationName: locationName, numberOfTickets: numberOfTickets))
+        
+
+        let searchFieldText = searchBar.text!
+        DispatchQueue.global(qos: .background).async {
+            
+            DispatchQueue.main.async {
+                self.searchBanner.show()
+            }
+            
+            self.arrayOfLocationsToShow?.removeAll()
+            for i in 0..<self.arrayOfLocations!.count {
+                guard let locationName = self.arrayOfLocations![i].locationName else { return }
+                guard let numberOfTickets = self.arrayOfLocations![i].numberOfTickets else { return }
+                if locationName.containsIgnoringCase(searchFieldText) {
+                    self.arrayOfLocationsToShow?.append(Location(locationName: locationName, numberOfTickets: numberOfTickets))
+                }
+            }
+            
+            DispatchQueue.main.async {
+                print("This is run on the main queue, after the previous code in outer block")
             }
         }
-        self.navigationController?.navigationBar.topItem?.title = "Searching..."
+        
+        
+
+        
         
 
     }
@@ -79,6 +99,8 @@ class LocationsViewController: UIViewController, UISearchBarDelegate {
         sb.placeholder = "Search"
         return sb
     }()
+    
+    
     
     var textField: UITextField = {
         let textField = UITextField()
