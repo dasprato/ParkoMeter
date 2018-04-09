@@ -10,21 +10,24 @@ import UIKit
 import NotificationBannerSwift
 import MapboxGeocoder
 
+
 class LocationsViewController: UIViewController, UISearchBarDelegate, UITextFieldDelegate {
-    let searchBanner = NotificationBanner(title: "Searching", subtitle: "For faster searches, enter more characters", style: .success)
+    let searchBanner = StatusBarNotificationBanner(title: "Searching", style: .success)
+    let minimumCharacterReminder = NotificationBanner(title: "At least three characters", subtitle: "For faster searches, enter more characters", style: .info)
+    let interfaceInfoBanner = StatusBarNotificationBanner(title: "Danger zones have a background")
     let cellId = "cellID"
-    var arrayOfLocations: [Location]? {
-        didSet {
-            allTicketsCollectionView.reloadData()
-            
-        }
-    }
-    
+    var arrayOfLocations = [Location]()
+    var firstSearch = ""
+    var secondSearch = ""
     var arrayOfLocationsToShow: [Location]? {
         didSet {
             DispatchQueue.main.async {
                 self.allTicketsCollectionView.reloadData()
+                if self.searchBanner.isDisplaying {
+                    self.searchBanner.dismiss()
+                }
             }
+
             
         }
     }
@@ -53,26 +56,39 @@ class LocationsViewController: UIViewController, UISearchBarDelegate, UITextFiel
         searchBar.delegate = self
         searchBar.becomeFirstResponder()
         arrayOfLocationsToShow = arrayOfLocations
+        interfaceInfoBanner.show()
     }
 
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         let searchFieldText = searchBar.text!
-        DispatchQueue.global(qos: .background).async {
-            DispatchQueue.main.async {
-                if !self.searchBanner.isDisplaying {
-                    self.searchBanner.show()
-                }
-                
+        if searchFieldText.count > 3 {
+            if firstSearch == "" {
+                firstSearch = searchFieldText
+            } else if firstSearch != "" && secondSearch == "" {
+                secondSearch = searchFieldText
+            } else {
+                firstSearch = secondSearch
+                secondSearch = searchFieldText
             }
-            self.arrayOfLocationsToShow?.removeAll()
-            for i in 0..<self.arrayOfLocations!.count {
-                guard let locationName = self.arrayOfLocations![i].locationName else { return }
-                guard let numberOfTickets = self.arrayOfLocations![i].numberOfTickets else { return }
-                if locationName.containsIgnoringCase(searchFieldText) {
-                    self.arrayOfLocationsToShow?.append(Location(locationName: locationName, numberOfTickets: numberOfTickets))
+            if firstSearch != secondSearch {
+                DispatchQueue.global(qos: .background).async {
+                    DispatchQueue.main.async {
+                        if !self.searchBanner.isDisplaying {
+                            self.searchBanner.show()
+                        }
+                    }
+                    self.arrayOfLocationsToShow?.removeAll()
+                    for i in 0..<self.arrayOfLocations.count {
+                        guard let locationName = self.arrayOfLocations[i].locationName else { return }
+                        guard let numberOfTickets = self.arrayOfLocations[i].numberOfTickets else { return }
+                        if locationName.containsIgnoringCase(searchFieldText) {
+                            self.arrayOfLocationsToShow?.append(Location(locationName: locationName, numberOfTickets: numberOfTickets))
+                        }
+                    }
                 }
             }
-
+        } else {
+            minimumCharacterReminder.show()
         }
     }
     
@@ -107,7 +123,7 @@ class LocationsViewController: UIViewController, UISearchBarDelegate, UITextFiel
         let ccv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         ccv.translatesAutoresizingMaskIntoConstraints = false
         ccv.contentInset = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
-        ccv.keyboardDismissMode = .interactive
+        ccv.keyboardDismissMode = .onDrag
         ccv.tag = 0
         ccv.isScrollEnabled = true
         ccv.bounces = true
@@ -116,14 +132,6 @@ class LocationsViewController: UIViewController, UISearchBarDelegate, UITextFiel
         ccv.showsVerticalScrollIndicator = false
         return ccv
     }()
-    
-    override func viewDidAppear(_ animated: Bool) {
-        
-
-    }
-    
-    
-    
 }
 
 extension LocationsViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {

@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         window?.rootViewController = UINavigationController(rootViewController: PrimeViewController())
+        ReadingService.readFileWithUTF8(withFileName: "LocationWiseTickets")
         return true
     }
 

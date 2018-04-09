@@ -44,11 +44,12 @@ class PrimeViewController: UIViewController, CLLocationManagerDelegate {
         view.addSubview(interactiveBackgroundMap)
         NSLayoutConstraint.activate([interactiveBackgroundMap.leftAnchor.constraint(equalTo: view.leftAnchor), interactiveBackgroundMap.rightAnchor.constraint(equalTo: view.rightAnchor), interactiveBackgroundMap.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor), interactiveBackgroundMap.bottomAnchor.constraint(equalTo: view.bottomAnchor)])
         interactiveBackgroundMap.setZoomLevel(17, animated: true)
-        self.fetchingDataBanner.duration = 60.0
-        self.fetchingDataBanner.autoDismiss = false
-        self.reportBanner.autoDismiss = true
-        self.invalidBanner.autoDismiss = true
-        self.fetchingDataBanner.show()
+//        self.fetchingDataBanner.duration = 60.0
+//        self.fetchingDataBanner.autoDismiss = false
+//        self.reportBanner.autoDismiss = true
+//        self.invalidBanner.autoDismiss = true
+//        self.fetchingDataBanner.show()
+            readFileWithUTF8(withFileName: "LocationWiseTickets")
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -89,11 +90,6 @@ class PrimeViewController: UIViewController, CLLocationManagerDelegate {
     }()
     
     override func viewDidAppear(_ animated: Bool) {
-        count = count + 1
-        if count < 2 {
-
-            onButtonPressed()
-        }
         
         // Ask for Authorisation from the User.
         self.locationManager.requestAlwaysAuthorization()
@@ -125,12 +121,11 @@ class PrimeViewController: UIViewController, CLLocationManagerDelegate {
     }()
     
     @objc func onButtonPressed() {
-        print("sending")
+        openVC()
+
         let db = Firestore.firestore()
-        
         db.collection("TotalOpens").getDocuments { (snapshot, error) in
             if error != nil {
-                print("ERROR ENCOUNTERED")
                 db.collection("TotalOpens").addDocument(data: ["TotalOpens": 1])
                 return
             }
@@ -142,7 +137,6 @@ class PrimeViewController: UIViewController, CLLocationManagerDelegate {
                 })
             }
         }
-        readFileWithUTF8(withFileName: "LocationWiseTickets")
     }
     
     
@@ -151,7 +145,6 @@ class PrimeViewController: UIViewController, CLLocationManagerDelegate {
         btnRptTicket.backgroundColor = .orange
         btnRptTicket.setTitle("REPORT A TICKET", for: .normal)
         btnRptTicket.addTarget(self, action: #selector(onReportTapped), for: .touchUpInside)
-        
         return btnRptTicket
     }()
     
@@ -173,7 +166,7 @@ class PrimeViewController: UIViewController, CLLocationManagerDelegate {
             self.numberOfTicketsReported = self.numberOfTicketsReported + 1
         }
         
-        reportBanner.show()
+            reportBanner.show()
         } else {
             invalidBanner.show()
             return
@@ -181,37 +174,60 @@ class PrimeViewController: UIViewController, CLLocationManagerDelegate {
     }
 
     func readFileWithUTF8(withFileName fileName: String) {
-        if arrayOfLocations.count == 0 {
-        print("Reading: " + "\(fileName)")
-        let fielURLProject = Bundle.main.path(forResource: fileName, ofType: "csv")
-        var readStringProject = ""
-        do {
-            readStringProject = try String(contentsOfFile: fielURLProject!, encoding: String.Encoding.utf8)
-            
-        } catch let error as NSError {
-            print("Failed tp read from project")
-            print(error)
-        }
-        var ticketsArray = [String]()
-        ticketsArray = readStringProject.components(separatedBy: .newlines)
-        for index in 0..<ticketsArray.count {
-            ticketsArray[index] = ticketsArray[index].replacingOccurrences(of: "\\", with: "", options: NSString.CompareOptions.literal, range: nil)
-            let tempArray = ticketsArray[index].split(separator: ":")
-            if tempArray.count > 1 {
-                arrayOfLocations.append(Location(locationName: String(tempArray[0]), numberOfTickets: String(tempArray[1].replacingOccurrences(of: " ", with: "", options: NSString.CompareOptions.literal, range: nil))))
+        
+        DispatchQueue.global(qos: .background).async {
+            print("Reading: " + "\(fileName)")
+            let fielURLProject = Bundle.main.path(forResource: fileName, ofType: "csv")
+            var readStringProject = ""
+            do {
+                readStringProject = try String(contentsOfFile: fielURLProject!, encoding: String.Encoding.utf8)
+                
+            } catch let error as NSError {
+                print("Failed tp read from project")
+                print(error)
             }
-        }
-            fetchingDataBanner.dismiss()
-            openVC()
-        } else {
-            fetchingDataBanner.dismiss()
-            openVC()
+            var ticketsArray = [String]()
+            ticketsArray = readStringProject.components(separatedBy: .newlines)
+            for index in 0..<ticketsArray.count {
+                ticketsArray[index] = ticketsArray[index].replacingOccurrences(of: "\\", with: "", options: NSString.CompareOptions.literal, range: nil)
+                let tempArray = ticketsArray[index].split(separator: ":")
+                    if tempArray.count > 1 {
+                        self.arrayOfLocations.append(Location(locationName: String(tempArray[0]), numberOfTickets: String(tempArray[1].replacingOccurrences(of: " ", with: "", options: NSString.CompareOptions.literal, range: nil))))
+                    }
+                
+            }
+            print(self.arrayOfLocations.count)
         }
     }
-    
     func openVC() {
         let vc = LocationsViewController()
-        vc.arrayOfLocations = self.arrayOfLocations
+        vc.arrayOfLocations = ReadingService.arrayOfLocations
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+
+class ReadingService {
+    
+    static var arrayOfLocations = [Location]()
+    static func readFileWithUTF8(withFileName fileName: String) {
+            print("Reading: " + "\(fileName)")
+            let fielURLProject = Bundle.main.path(forResource: fileName, ofType: "csv")
+            var readStringProject = ""
+            do {
+                readStringProject = try String(contentsOfFile: fielURLProject!, encoding: String.Encoding.utf8)
+                
+            } catch let error as NSError {
+                print("Failed tp read from project")
+                print(error)
+            }
+            var ticketsArray = [String]()
+            ticketsArray = readStringProject.components(separatedBy: .newlines)
+            for index in 0..<ticketsArray.count {
+                let tempArray = ticketsArray[index].split(separator: ":")
+                if tempArray.count > 1 {
+                    arrayOfLocations.append(Location(locationName: String(tempArray[0]), numberOfTickets: String(tempArray[1])))
+                }
+            }
     }
 }
