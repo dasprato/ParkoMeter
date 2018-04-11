@@ -17,15 +17,15 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.1</string>
+	<string>1.2</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>2</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>MGLMapboxAccessToken</key>
 	<string>pk.eyJ1IjoiZGFzcHJhdG8iLCJhIjoiY2pmcGJkMjQ1MXd3dDJ3bWs5b3Flazg0NiJ9.pw8hUyc-4X698spdLicwbg</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Your location is only used when you report a parking ticket</string>
+	<string>Your location (longitude and latitude) is collected and uploaded to our servers when you report a parking ticket. This helps us provide better analysis of high risk zones to all the drivers.</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>

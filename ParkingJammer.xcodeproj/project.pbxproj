@@ -10,6 +10,7 @@
 		2CF8D5110DE6ED9C173C6E3B /* Pods_ParkingJammerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7358E06579DB4826A752ACC5 /* Pods_ParkingJammerTests.framework */; };
 		5ED59B77059066F4E2D2658D /* Pods_ParkingJammerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B84C38973BFA62936682F26 /* Pods_ParkingJammerUITests.framework */; };
 		6B2C635E71002E4FA1A3475E /* Pods_ParkingJammer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FBCEFF9FD06758676CF1124 /* Pods_ParkingJammer.framework */; };
+		D24CFB8C207DCBC60061D519 /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24CFB8B207DCBC60061D519 /* PrivacyPolicyViewController.swift */; };
 		D25D0CAE20777A19001E99F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25D0CAD20777A19001E99F7 /* AppDelegate.swift */; };
 		D25D0CB020777A19001E99F7 /* PrimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25D0CAF20777A19001E99F7 /* PrimeViewController.swift */; };
 		D25D0CB520777A19001E99F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D25D0CB420777A19001E99F7 /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 		907E33AFC53CE095CFD58266 /* Pods-ParkingJammerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParkingJammerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParkingJammerTests/Pods-ParkingJammerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B980087D5D069BB3004B812D /* Pods-ParkingJammer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParkingJammer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParkingJammer/Pods-ParkingJammer.debug.xcconfig"; sourceTree = "<group>"; };
 		CA7F1D2F3C5F772BAFCE0224 /* Pods-ParkingJammerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParkingJammerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ParkingJammerUITests/Pods-ParkingJammerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D24CFB8B207DCBC60061D519 /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
 		D25D0CAA20777A19001E99F7 /* ParkingJammer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParkingJammer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D25D0CAD20777A19001E99F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D25D0CAF20777A19001E99F7 /* PrimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimeViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				D25D0CDF20777AB1001E99F7 /* YearSummary.csv */,
 				D25D0CE120777ACB001E99F7 /* LocationWiseTickets.csv */,
 				D25D0CE320778157001E99F7 /* LocationsViewController.swift */,
+				D24CFB8B207DCBC60061D519 /* PrivacyPolicyViewController.swift */,
 			);
 			path = ParkingJammer;
 			sourceTree = "<group>";
@@ -526,6 +529,7 @@
 				D25D0CB020777A19001E99F7 /* PrimeViewController.swift in Sources */,
 				D25D0CAE20777A19001E99F7 /* AppDelegate.swift in Sources */,
 				D25D0CE420778157001E99F7 /* LocationsViewController.swift in Sources */,
+				D24CFB8C207DCBC60061D519 /* PrivacyPolicyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

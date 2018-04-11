@@ -39,7 +39,8 @@ class PrimeViewController: UIViewController, CLLocationManagerDelegate {
         self.navigationItem.setRightBarButton(button, animated: true)
         
         let reportButton = UIBarButtonItem(title: "Report Ticket", style: .plain, target: self, action: #selector(onReportTapped))
-        self.navigationItem.setLeftBarButton(reportButton, animated: true)
+        let privacyPolicyButton = UIBarButtonItem(image: UIImage(named: "privacy")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(onPrivacyPolicyTapped))
+        self.navigationItem.setLeftBarButtonItems([privacyPolicyButton, reportButton], animated: true)
         
         view.addSubview(interactiveBackgroundMap)
         NSLayoutConstraint.activate([interactiveBackgroundMap.leftAnchor.constraint(equalTo: view.leftAnchor), interactiveBackgroundMap.rightAnchor.constraint(equalTo: view.rightAnchor), interactiveBackgroundMap.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor), interactiveBackgroundMap.bottomAnchor.constraint(equalTo: view.bottomAnchor)])
@@ -194,7 +195,6 @@ class PrimeViewController: UIViewController, CLLocationManagerDelegate {
                     if tempArray.count > 1 {
                         self.arrayOfLocations.append(Location(locationName: String(tempArray[0]), numberOfTickets: String(tempArray[1].replacingOccurrences(of: " ", with: "", options: NSString.CompareOptions.literal, range: nil))))
                     }
-                
             }
             print(self.arrayOfLocations.count)
         }
@@ -203,6 +203,11 @@ class PrimeViewController: UIViewController, CLLocationManagerDelegate {
         let vc = LocationsViewController()
         vc.arrayOfLocations = ReadingService.arrayOfLocations
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc func onPrivacyPolicyTapped() {
+        let vc = UINavigationController(rootViewController: PrivacyPolicyViewController())
+        present(vc, animated: true, completion: nil)
     }
 }
 
